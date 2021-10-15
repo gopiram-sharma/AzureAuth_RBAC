@@ -33,7 +33,7 @@ namespace HCM.ProfitCenter.Controllers
         }
 
         [AuthorizeForScopes(Scopes = new[] { Infrastructure.Constants.ScopeUserRead })]
-        [Authorize(Policy = AuthorizationPolicies.ProfitCenterUser)]
+        [Authorize(Policy = AuthorizationPolicies.NormalUserPolicy)]
         public async Task<IActionResult> Profile()
         {
             // Initialize the GraphServiceClient.
@@ -62,7 +62,7 @@ namespace HCM.ProfitCenter.Controllers
         /// </summary>
         /// <returns></returns>
         [AuthorizeForScopes(Scopes = new[] { GraphScopes.UserReadBasicAll })]
-        [Authorize(Policy = AuthorizationPolicies.ProfitCenterAdmin)]
+        [Authorize(Policy = AuthorizationPolicies.AdminPolicy)]
         public async Task<IActionResult> Users()
         {
             // Initialize the GraphServiceClient.

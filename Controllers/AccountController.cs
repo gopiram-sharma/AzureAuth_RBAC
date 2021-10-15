@@ -37,8 +37,7 @@ namespace HCM.ProfitCenter.Controllers
         /// Fetches all the groups a user is assigned to.  This method requires the signed-in user to be assigned to the 'DirectoryViewers' approle.
         /// </summary>
         /// <returns></returns>
-        //[AuthorizeForScopes(Scopes = new[] { GraphScopes.DirectoryReadAll })]
-        [Authorize(Policy = AuthorizationPolicies.AssignmentToDirectoryViewerRoleRequired)]
+        [Authorize(Policy = AuthorizationPolicies.DirectoryViewerRolePolicy)]
         public async Task<IActionResult> Groups()
         {
             string[] scopes = new[] { GraphScopes.DirectoryReadAll };

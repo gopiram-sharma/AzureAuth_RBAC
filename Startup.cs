@@ -65,10 +65,10 @@ namespace HCM.ProfitCenter
             // Adding authorization policies that enforce authorization using Azure AD roles.
             services.AddAuthorization(options =>
             {
-                options.AddPolicy(AuthorizationPolicies.ProfitCenterUser, policy => policy.RequireRole(AppRole.ProfitCenterUser));
-                options.AddPolicy(AuthorizationPolicies.ProfitCenterAdmin, policy => policy.RequireRole(AppRole.ProfitCenterAdmin));
-                options.AddPolicy(AuthorizationPolicies.AssignmentToUserReaderRoleRequired, policy => policy.RequireRole(AppRole.UserReaders));
-                options.AddPolicy(AuthorizationPolicies.AssignmentToDirectoryViewerRoleRequired, policy => policy.RequireRole(AppRole.DirectoryViewers));
+                options.AddPolicy(AuthorizationPolicies.NormalUserPolicy, policy => policy.RequireRole(AppRole.NormalUser));
+                options.AddPolicy(AuthorizationPolicies.AdminPolicy, policy => policy.RequireRole(AppRole.AdminUser));
+                options.AddPolicy(AuthorizationPolicies.UserReaderRolePolicy, policy => policy.RequireRole(AppRole.UserReaders));
+                options.AddPolicy(AuthorizationPolicies.DirectoryViewerRolePolicy, policy => policy.RequireRole(AppRole.DirectoryViewers));
             });
 
             services.AddControllersWithViews(options =>

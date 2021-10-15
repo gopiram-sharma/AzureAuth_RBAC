@@ -13,12 +13,12 @@ namespace HCM.ProfitCenter.Infrastructure
         /// <summary>
         /// User can manage theri own profit center
         /// </summary>
-        public const string ProfitCenterUser = "ProfitCenterUser";
+        public const string NormalUser = "NormalUser";
 
         /// <summary>
         /// Admins can manage the profit center.
         /// </summary>
-        public const string ProfitCenterAdmin = "ProfitCenterAdmin";
+        public const string AdminUser = "ProfitCenterAdmin";
 
         /// <summary>
         /// User readers can read basic profiles of all users in the directory.
@@ -36,9 +36,9 @@ namespace HCM.ProfitCenter.Infrastructure
     /// </summary>
     public static class AuthorizationPolicies
     {
-        public const string ProfitCenterUser = "AssignmentToProfitCenterUserRoleRequired";
-        public const string ProfitCenterAdmin= "AssignmentToProfitCenterAdminRoleRequired";
-        public const string AssignmentToUserReaderRoleRequired = "AssignmentToUserReaderRoleRequired";
-        public const string AssignmentToDirectoryViewerRoleRequired = "AssignmentToDirectoryViewerRoleRequired";
+        public const string NormalUserPolicy = "AssignmentToProfitCenterUserRoleRequired";
+        public const string AdminPolicy= "AssignmentToProfitCenterAdminRoleRequired";
+        public const string UserReaderRolePolicy = "AssignmentToUserReaderRoleRequired";
+        public const string DirectoryViewerRolePolicy = "AssignmentToDirectoryViewerRoleRequired";
     }
 }
