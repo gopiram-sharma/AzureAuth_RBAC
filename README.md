@@ -1,12 +1,9 @@
 ---
 services: active-directory
-platforms: dotnet
 author: Gopiram Sharma
-level: 300
 client: ASP.NET Core Web App
 service: Microsoft Graph
 endpoint: Microsoft identity platform
-page_type: sample
 languages:
   - csharp  
 products:
@@ -14,7 +11,6 @@ products:
   - azure-active-directory  
   - dotnet
   - office-ms-graph
-description: "Apply authentication and authorization using app roles & roles claims to an ASP.NET Core web app that signs-in users with the Microsoft identity platform"
 ---
 # Apply authentication and authorization using **app roles** & **roles** claims to an ASP.NET Core web app that signs-in users with the Microsoft identity platform
 
